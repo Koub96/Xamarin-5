@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                     xmlns:local="clr-namespace:gr.entersoft.universal"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                     x:Class="test.universal.LoginPage" 
+                     NavigationPage.HasNavigationBar="False"
+                     Title="Entersoft Med Rep">
+    <ContentPage.Content>
+        <RelativeLayout x:Name="relLayout">
+            <Image x:Name="bgImage" Aspect="Fill"
+                   RelativeLayout.XConstraint= "{ConstraintExpression Type=RelativeToParent, Property=X, Constant=0}"
+                  RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y,Constant=0}"
+                  RelativeLayout.WidthConstraint= "{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=1.0}"
+                  RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height,Factor=1.0}">
+            </Image>
+            <Grid RowSpacing="0" Padding="0,100,0,0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
+                  RelativeLayout.XConstraint= "{ConstraintExpression Type=RelativeToParent, Property=X, Constant=0}"
+                  RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y,Constant=0}"
+                  RelativeLayout.WidthConstraint= "{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=1.0}"
+                  RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height,Factor=1.0}">
+
+                <Grid.Padding>
+                    <OnPlatform x:TypeArguments="Thickness" iOS="0,22,0,0" Android="0,0,0,0" />
+                </Grid.Padding>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+
+                <Label x:Name="LoginTitle"  Grid.Row="0"  Grid.Column="0" Grid.ColumnSpan="3" HorizontalOptions="CenterAndExpand" VerticalOptions="End" Font="Bold" FontSize="{OnIdiom Phone=28, Default=35}"/>
+                
+                <StackLayout Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                </StackLayout>
+
+                <StackLayout Grid.Row="1" Grid.Column="1" Spacing="20" Orientation="Vertical" WidthRequest="{OnIdiom Phone=340, Default=400}">
+                    <Frame CornerRadius="20" BackgroundColor="#80FFFFFF" HasShadow="False" Padding="40">
+                        <StackLayout Spacing="30" Orientation="Vertical" >
+
+
+                            <StackLayout Orientation="Horizontal">
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                </StackLayout>
+            </Grid>
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>

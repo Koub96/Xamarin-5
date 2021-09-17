@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="test.universal.App">
+  <Application.Resources>
+        <ResourceDictionary>
+
+
+            <Color x:Key="Primary">#2196F3</Color>
+            <Color x:Key="PrimaryDark">#1976D2</Color>
+            <Color x:Key="Accent">#96d1ff</Color>
+            <Color x:Key="LightBackgroundColor">#FAFAFA</Color>
+            <Color x:Key="DarkBackgroundColor">#C0C0C0</Color>
+            <Color x:Key="MediumGrayTextColor">#4d4d4d</Color>
+            <Color x:Key="LightTextColor">#999999</Color>
+
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="BarTextColor" Value="White" />
+            </Style>
+
+           
+
+
+
+            <Style x:Key="PageBackgroundImage" TargetType="Image">
+                <Setter Property="Source" Value="bg_ss.png" />
+                <Setter Property="Aspect" Value="Fill" />
+            </Style>
+
+            <Style x:Key="MenuBackgroundColor" TargetType="View">
+                <Setter Property="BackgroundColor" Value="#FF0000" />
+            </Style>
+            <Style x:Key="MenuButtonStyle" TargetType="Button" BasedOn="{StaticResource MenuBackgroundColor}">
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="Text" Value="Menu" />
+            </Style>
+            <Style x:Key="MenuImageButtonStyle" TargetType="Image" BasedOn="{StaticResource MenuBackgroundColor}">
+                <Setter Property="Source" Value="menu_list.png" />
+            </Style>
+
+            <Style x:Key="ScanBackgroundColor" TargetType="View">
+                <Setter Property="BackgroundColor" Value="#CC0000" />
+            </Style>
+            <Style x:Key="ScanImageButtonStyle" TargetType="Image" BasedOn="{StaticResource ScanBackgroundColor}">
+                <Setter Property="Source" Value="scan_menu.png" />
+            </Style>
+
+
+            <Style x:Key="SubmitButtonStyle" TargetType="Button">
+                <Setter Property="BorderRadius" Value="10" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="Medium" />
+            </Style>
+
+            <!--inherit from above-->
+            <Style x:Key="ForgotPINButtonStyle" TargetType="Button" BasedOn="{StaticResource SubmitButtonStyle}">
+                <Setter Property="BackgroundColor" Value="#104785" />
+                <Setter Property="FontSize" Value="Micro"/>
+            </Style>
+
+            <Style x:Key="PickerStyle" TargetType="Picker">
+                <Setter Property="BackgroundColor" Value="#99ffffff" />
+            </Style>
+
+            
+            <Style x:Key="baseLabelStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="22" />
+            </Style>
+
+            <Style x:Key="infoLabelStyle" BasedOn="{StaticResource baseLabelStyle}" TargetType="Label">
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+
+
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
